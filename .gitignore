@@ -1,0 +1,15 @@
+# Entorno virtual
+venv/
+__pycache__/
+
+# Archivos de configuración de IDEs
+.idea/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de distribución
+dist/
+build/
+*.egg-info/

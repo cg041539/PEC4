@@ -1,0 +1,6 @@
+include README.md
+include license.txt
+include requirements.txt
+include Data/nics-firearm-background-checks.csv
+include Data/us-state-populations.csv
+include Data/us-states.json
