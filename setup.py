@@ -5,19 +5,29 @@ setup(
     version="0.1.0",
     author="Cristina Garcia Fernandez",
     author_email="cristina@ayer.be",
-    description="Proyecto PEC4 para procesamiento y análisis de datos de verificaciones de antecedentes de armas de fuego.",
+    description="Proyecto PEC4 para procesamiento y análisis de datos de verificaciones "
+                "de antecedentes de armas de fuego.",
     long_description=open('README.md').read(),
     long_description_content_type="text/markdown",
-    url="https://github.com/cg041539/PEC4",  # URL del proyecto
-    packages=find_packages(where='src'),  # Encuentra automáticamente todos los paquetes y subpaquetes en 'src'
-    package_dir={'': 'src'},  # Le indica a setuptools que los paquetes están en 'src'
+    url="https://github.com/cg041539/PEC4",
+    packages=find_packages(where='src'),
+    package_dir={'PEC4': 'src'},
+    py_modules=['main'],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
     python_requires='>=3.6',
-    install_requires=open('requirements.txt').read().splitlines(),  # Lee las dependencias desde requirements.txt
+    install_requires=open('requirements.txt').read().splitlines(),
+    include_package_data=True,
+    entry_points={
+        'console_scripts': [
+            'pec4=main:main',
+        ],
+    },
+)
+sde requirements.txt
     include_package_data=True,  # Incluye archivos especificados en MANIFEST.in
     entry_points={  # Si tienes scripts ejecutables
         'console_scripts': [
